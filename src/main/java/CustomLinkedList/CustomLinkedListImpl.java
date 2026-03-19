@@ -42,6 +42,9 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
 
     @Override
     public boolean add(int index, E el) {
+        if(this.head == null && index == 0){
+            linkFirst(el);
+        }
         if(index < 0 || index > size){
             logger.info("Index: "+index+" Size: "+size, new IndexOutOfBoundsException());
             throw new IndexOutOfBoundsException("Index: "+index+" Size: "+size);
@@ -49,7 +52,9 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
         }
         if(index == size){
             linkLast(el);
-        } else {
+        }
+
+        else {
             Node<E> nodeAtIndex = getNode(index);
             linkBefore(el, nodeAtIndex);
         }
@@ -81,7 +86,7 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
 
     @Override
     public E get(int index){
-        if(index < 0 || index > size){
+        if(index < 0 || index >= size){
             logger.info("Index: "+index+" Size: "+size, new IndexOutOfBoundsException());
             throw new IndexOutOfBoundsException("Index: "+index+" Size: "+size);
         }
@@ -125,6 +130,10 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
 
     @Override
     public E remove(int index) {
+        if(getNode(index) == null){
+            logger.info("List is empty", new NullPointerException());
+            throw new NullPointerException("List is empty");
+        }
         if(index < 0 || index > size){
             logger.info("Index: "+index+" Size: "+size, new IndexOutOfBoundsException());
             throw new IndexOutOfBoundsException("Index: "+index+" Size: "+size);
@@ -157,13 +166,14 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
         modCount++;
     }
     private void linkBefore(E el, Node<E> nodeAtIndex){
-        final Node<E> prevNode = nodeAtIndex.prev;
-        final Node<E> newNode = new Node<>(prevNode,el,nodeAtIndex);
+        Node<E> prevNode = nodeAtIndex.prev;
+        Node<E> newNode = new Node<>(prevNode,el,nodeAtIndex);
         nodeAtIndex.prev = newNode;
-        if (prevNode == null)
+        if (prevNode == null) {
             head = newNode;
-        else
+        } else {
             prevNode.next = newNode;
+        }
         size++;
         modCount++;
     }

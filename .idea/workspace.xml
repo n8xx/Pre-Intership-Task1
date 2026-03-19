@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef9f6267-10fb-476a-b421-d47a1f1619be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/resouces/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AddTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/RemoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RemoveTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +39,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.TestCustomLinkedList.executor": "Run",
+    "JUnit.AddTest.executor": "Run",
+    "JUnit.AddTest.shouldAddAtIndexZero.executor": "Run",
     "JUnit.CustomLinkedListTest.executor": "Run",
     "JUnit.CustomLinkedListTest.testAddAtIndexZero.executor": "Run",
+    "JUnit.GetTest.executor": "Run",
+    "JUnit.GetTest.shouldGetElementByIndex.executor": "Run",
+    "JUnit.GetTest.shouldGetElementByIndexOfSize.executor": "Run",
+    "JUnit.GetTest.shouldGetLastElementByIndexOfSize.executor": "Run",
+    "JUnit.RemoveTest.executor": "Run",
+    "JUnit.RemoveTest.shouldRemoveFirstElementAndUpdateSize.executor": "Run",
+    "JUnit.RemoveTest.shouldThrowsOutOfBoundsExceptionIfRemovingFromEmptyList.executor": "Run",
+    "JUnit.java in Pre-IntershipTask1.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -67,38 +68,60 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CustomLinkedListTest">
-    <configuration name="CustomLinkedListTeat" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="CustomLinkedListTest" />
-      <module name="Pre-IntershipTask1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AddTest.shouldAddAtIndexZero">
+    <configuration name="AddTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pre-IntershipTask1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomLinkedListTest" />
+      <option name="MAIN_CLASS_NAME" value="AddTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomLinkedListTest.testAddAtIndexZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddTest.shouldAddAtIndexZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pre-IntershipTask1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CustomLinkedListTest" />
-      <option name="METHOD_NAME" value="testAddAtIndexZero" />
+      <option name="MAIN_CLASS_NAME" value="AddTest" />
+      <option name="METHOD_NAME" value="shouldAddAtIndexZero" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pre-IntershipTask1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RemoveTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveTest.shouldThrowsOutOfBoundsExceptionIfRemovingFromEmptyList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pre-IntershipTask1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RemoveTest" />
+      <option name="METHOD_NAME" value="shouldThrowsOutOfBoundsExceptionIfRemovingFromEmptyList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in Pre-IntershipTask1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pre-IntershipTask1" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomLinkedListTest" />
-        <item itemvalue="JUnit.CustomLinkedListTest.testAddAtIndexZero" />
-        <item itemvalue="Application.CustomLinkedListTeat" />
+        <item itemvalue="JUnit.AddTest.shouldAddAtIndexZero" />
+        <item itemvalue="JUnit.AddTest" />
+        <item itemvalue="JUnit.java in Pre-IntershipTask1" />
+        <item itemvalue="JUnit.RemoveTest" />
+        <item itemvalue="JUnit.RemoveTest.shouldThrowsOutOfBoundsExceptionIfRemovingFromEmptyList" />
       </list>
     </recent_temporary>
   </component>
@@ -124,7 +147,8 @@
       <workItem from="1773351432808" duration="6211000" />
       <workItem from="1773402188290" duration="2418000" />
       <workItem from="1773472221268" duration="6091000" />
-      <workItem from="1773657004078" duration="7501000" />
+      <workItem from="1773657004078" duration="10585000" />
+      <workItem from="1773920849078" duration="6793000" />
     </task>
     <servers />
   </component>
@@ -145,12 +169,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java</url>
-          <line>89</line>
+          <line>94</line>
           <properties class="CustomLinkedList.CustomLinkedListImpl" method="getNode">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java</url>
+          <line>167</line>
+          <properties class="CustomLinkedList.CustomLinkedListImpl" method="linkBefore">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
