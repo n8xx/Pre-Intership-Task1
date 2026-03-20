@@ -1,15 +1,18 @@
 package CustomLinkedList;
 
-import java.util.LinkedList;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+
+import java.util.LinkedList;
+import java.util.Objects;
+
 
 public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
     private static final Logger logger = LogManager.getLogger();
     private Node<E> head;
     private Node<E> tail;
     private int  size;
-    private int modCount = 0;
+
 
     private static class Node<E>{
         private E data;
@@ -21,17 +24,17 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
             this.data = data;
             this.next = next;
         }
-        /*Node(E data) {
-            this.data = data;
-            this.next = null;
-            this.prev = null;
-        }*/
     }
 
     public CustomLinkedListImpl() {
         this.head = null;
         this.tail = null;
         this.size = 0;
+    }
+    public CustomLinkedListImpl(CustomLinkedListImpl<E> other) {
+        this.head = other.head;
+        this.tail = other.tail;
+        this.size = other.size;
     }
     public int size (){return this.size;}
     public boolean isEmpty(){return this.size == 0;}
@@ -143,7 +146,6 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
         else
             first.prev = newNode;
         size++;
-        modCount++;
     }
     private void linkLast(E el){
         Node<E> last = tail;
@@ -156,7 +158,6 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
             last.next = newNode;
         }
         size++;
-        modCount++;
     }
     private void linkBefore(E el, Node<E> nodeAtIndex){
         Node<E> prevNode = nodeAtIndex.prev;
@@ -168,7 +169,6 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
             prevNode.next = newNode;
         }
         size++;
-        modCount++;
     }
 
 
@@ -183,21 +183,19 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
         else
             next.prev = null;
         size--;
-        modCount++;
         return element;
     }
     private E unlinkLast(Node<E> last) {
         final E element = last.data;
         final Node<E> prev = last.prev;
         last.data = null;
-        last.prev = null; // help GC
+        last.prev = null;
         tail = prev;
         if (prev == null)
             head = null;
         else
             prev.next = null;
         size--;
-        modCount++;
         return element;
     }
     E unlink(Node<E> x) {
@@ -221,18 +219,57 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
 
         x.data = null;
         size--;
-        modCount++;
+
         return element;
     }
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);//TODO
+        if (this == obj) {
+            return true;
+        }
+
+        if (obj == null) {
+            return false;
+        }
+
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        CustomLinkedListImpl<?> other = (CustomLinkedListImpl<?>) obj;
+        if (size != other.size) {
+            return false;
+        }
+
+        Node<?> current = head;
+        Node<?> otherCurrent = other.head;
+
+        while (current != null) {
+            if (current.data == null) {
+                if (otherCurrent.data != null) {
+                    return false;
+                }
+            } else {
+                if (!current.data.equals(otherCurrent.data)) {
+                    return false;
+                }
+            }
+            current = current.next;
+            otherCurrent = otherCurrent.next;
+        }
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();//TODO
+        int result = 1;
+        Node<E> current = head;
+        while (current != null) {
+            result = 31 * result + Objects.hashCode(current.data);
+            current = current.next;
+        }
+
+        return result;
     }
     @Override
     public String toString(){

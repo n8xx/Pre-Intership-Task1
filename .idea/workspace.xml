@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef9f6267-10fb-476a-b421-d47a1f1619be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test1.java" afterDir="false" />
+    <list default="true" id="ef9f6267-10fb-476a-b421-d47a1f1619be" name="Changes" comment="fix add method and test all public methods">
+      <change afterPath="$PROJECT_DIR$/src/test/java/EqualsHashcodeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/resouces/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,8 @@
     "JUnit.AddTest.shouldAddAtIndexZero.executor": "Debug",
     "JUnit.CustomLinkedListTest.executor": "Run",
     "JUnit.CustomLinkedListTest.testAddAtIndexZero.executor": "Run",
+    "JUnit.EqualsHashcodeTest.equals_shouldTrueWhenTheSameObject.executor": "Run",
+    "JUnit.EqualsHashcodeTest.executor": "Run",
     "JUnit.GetTest.executor": "Run",
     "JUnit.GetTest.shouldGetElementByIndex.executor": "Run",
     "JUnit.GetTest.shouldGetElementByIndexOfSize.executor": "Run",
@@ -80,31 +82,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddTest.shouldAddAtIndexZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EqualsHashcodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pre-IntershipTask1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddTest" />
-      <option name="METHOD_NAME" value="shouldAddAtIndexZero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Pre-IntershipTask1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <option name="MAIN_CLASS_NAME" value="EqualsHashcodeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1.testLinkBefore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EqualsHashcodeTest.equals_shouldTrueWhenTheSameObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Pre-IntershipTask1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test1" />
-      <option name="METHOD_NAME" value="testLinkBefore" />
+      <option name="MAIN_CLASS_NAME" value="EqualsHashcodeTest" />
+      <option name="METHOD_NAME" value="equals_shouldTrueWhenTheSameObject" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pre-IntershipTask1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,10 +121,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.java in Pre-IntershipTask1" />
+        <item itemvalue="JUnit.EqualsHashcodeTest" />
+        <item itemvalue="JUnit.EqualsHashcodeTest.equals_shouldTrueWhenTheSameObject" />
+        <item itemvalue="JUnit.GetTest" />
         <item itemvalue="JUnit.AddTest" />
-        <item itemvalue="JUnit.AddTest.shouldAddAtIndexZero" />
-        <item itemvalue="JUnit.Test1" />
-        <item itemvalue="JUnit.Test1.testLinkBefore" />
       </list>
     </recent_temporary>
   </component>
@@ -150,37 +151,32 @@
       <workItem from="1773402188290" duration="2418000" />
       <workItem from="1773472221268" duration="6091000" />
       <workItem from="1773657004078" duration="10585000" />
-      <workItem from="1773920849078" duration="12630000" />
+      <workItem from="1773920849078" duration="18811000" />
     </task>
+    <task id="LOCAL-00001" summary="fix add method and test all public methods">
+      <option name="closed" value="true" />
+      <created>1774040387449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774040387449</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix add method and test all public methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix add method and test all public methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java</url>
-          <line>87</line>
-          <properties class="CustomLinkedList.CustomLinkedListImpl" method="getNode">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java</url>
-          <line>160</line>
-          <properties class="CustomLinkedList.CustomLinkedListImpl" method="linkBefore">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/CustomLinkedList/CustomLinkedListImpl.java</url>
-          <line>43</line>
+          <line>46</line>
           <properties class="CustomLinkedList.CustomLinkedListImpl" method="add">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

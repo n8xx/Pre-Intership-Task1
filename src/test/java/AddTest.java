@@ -1,10 +1,5 @@
-
-import CustomLinkedList.CustomLinkedList;
 import CustomLinkedList.CustomLinkedListImpl;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
@@ -13,16 +8,25 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AddTest {
     CustomLinkedListImpl<String> list ;
-    CustomLinkedListImpl<Integer> intlist ;
     @BeforeEach
     void setUp() {
         list = new CustomLinkedListImpl<String>();
-        intlist = new CustomLinkedListImpl<Integer>();
+
     }
-
-
+        // Test for size()
         @Test
-        void shouldAddFirstElementInBeginningAndUpdateSize(){
+        void size_shouldReturnSize(){
+            list.add("A");
+            list.add("B");
+            assertEquals(2,list.size());
+        }
+        @Test
+        void size_shouldReturnZeroWhenListIsEmpty(){
+            assertEquals(0,list.size());
+        }
+        // Test for addFirst()
+        @Test
+        void addFirst_shouldAddFirstElementInBeginningAndUpdateSize(){
             assertEquals(0,list.size());
             list.addFirst("first");
             list.addFirst("second");
@@ -31,8 +35,9 @@ public class AddTest {
             assertEquals("second", list.getFirst());
             assertEquals("first", list.getLast());
         }
+        // Test for addLast()
         @Test
-        void shouldAddElementToTheEndAndUpdateSize(){
+        void addLast_shouldAddElementToTheEndAndUpdateSize(){
             assertEquals(0,list.size());
             list.addLast("first");
             list.addLast("second");
@@ -41,9 +46,9 @@ public class AddTest {
             assertEquals("first", list.getFirst());
             assertEquals("second", list.getLast());
         }
-
+        // Test for add()
         @Test
-        void shouldAddElementInEnd(){
+        void add_shouldAddElementInEndAndUpdateSize(){
             list.add("A");
             list.add("B");
             list.add("C");
@@ -53,9 +58,11 @@ public class AddTest {
             assertEquals("C", list.getLast());
         }
         @Test
-        void shouldAddElementAtIndex(){
+        void add_shouldAddElementAtIndexAndUpdateSize(){
+        assertEquals(0,list.size());
         list.add("A");
         list.add("C");
+        assertEquals(2,list.size());
         list.add(1,"B");
 
         assertEquals(3,list.size());
@@ -64,7 +71,8 @@ public class AddTest {
         assertEquals("C", list.get(2));
         }
         @Test
-        void shouldAddAtIndexZero(){
+        void add_shouldAddAtIndexZeroAndUpdateSize(){
+        assertEquals(0,list.size());
         list.add(0,"A");
         list.add(0,"B");
 
@@ -74,29 +82,26 @@ public class AddTest {
         assertEquals("A",list.getLast());
         }
     @Test
-    void shouldAddFirstElementIfListIsEmpty() {
+    void add_shouldAddFirstElementIfListIsEmpty() {
         assertEquals(0,list.size());
         list.add("first");
         assertEquals(1,list.size());
     }
     @Test
-    void shouldAddEWithIndexOfSizeInTheEnd(){
+    void add_shouldAddInTheEndIfIndexOfSize(){
         list.add("A");
         list.add("B");
         list.add(list.size(), "C");
         assertEquals(3,list.size());
         assertEquals("C",list.getLast());
     }
+    // Test for invalid index exception
     @Test
-    void shouldThrowIndexOutOfBoundsExeptionIfInvalidIndex(){
+    void add_shouldThrowIndexOutOfBoundsExсeptionIfInvalidIndex(){
         assertThrows(IndexOutOfBoundsException.class, ()->list.add(-1,"A"));
         assertThrows(IndexOutOfBoundsException.class, ()->list.add(1,"A"));
         list.add("A");
         assertThrows(IndexOutOfBoundsException.class, ()->list.add(2,"B"));
-    }
-    @Test
-    void shouldReturnZeroWhenListIsEmpty(){
-        assertEquals(0,list.size());
     }
     }
 
