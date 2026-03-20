@@ -42,22 +42,15 @@ public class CustomLinkedListImpl<E> implements CustomLinkedList<E> {
 
     @Override
     public boolean add(int index, E el) {
-        if(this.head == null && index == 0){
-            linkFirst(el);
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
-        if(index < 0 || index > size){
-            logger.info("Index: "+index+" Size: "+size, new IndexOutOfBoundsException());
-            throw new IndexOutOfBoundsException("Index: "+index+" Size: "+size);
-
-        }
-        if(index == size){
+        if (index == size) {
             linkLast(el);
+        } else {
+            linkBefore(el, getNode(index));
         }
 
-        else {
-            Node<E> nodeAtIndex = getNode(index);
-            linkBefore(el, nodeAtIndex);
-        }
         return true;
     }
     @Override

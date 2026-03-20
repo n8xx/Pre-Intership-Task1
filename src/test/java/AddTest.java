@@ -1,6 +1,8 @@
 
 import CustomLinkedList.CustomLinkedList;
 import CustomLinkedList.CustomLinkedListImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -65,6 +67,7 @@ public class AddTest {
         void shouldAddAtIndexZero(){
         list.add(0,"A");
         list.add(0,"B");
+
 
         assertEquals(2,list.size());
         assertEquals("B",list.getFirst());
